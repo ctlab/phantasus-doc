@@ -7,3 +7,7 @@ remote_theme: pmarsceill/just-the-docs
 
 kramdown:
   toc_levels: "1,2"
+
+aux_links:
+  "Phantasus on GitHub":
+      - "https://github.com/ctlab/phantasus"

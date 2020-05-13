@@ -28,7 +28,7 @@ The simplest way to try Phantasus application is to go to web-site
 [https://ctlab.itmo.ru/phantasus](https://ctlab.itmo.ru/phantasus) or
 its mirror [https://artyomovlab.wustl.edu/phantasus](https://artyomovlab.wustl.edu/phantasus)
 where the latest versions are deployed. 
-Alternatively, Phantaus can be start locally (see [[Serving Phantasus]]).
+Alternatively, Phantaus can be start locally (see [Serving Phantasus](serving-phantasus.html)).
 
 When Phantasus opens the starting screen should appear:
 
@@ -55,7 +55,7 @@ Columns correspond to samples.
 They are annotated with titles, GEO sample accession identifiers and treatment field.
 The annotations, such as treatment, are loaded from user-submitted GEO annotations 
 (they can be seen, for example, in _Charateristics_
-secion at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1304836).
+section at [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1304836](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1304836)).
 We note that not for all of the datasets in GEO such proper annotations are supplied.
 
 ### Adjusting expression values
@@ -210,16 +210,13 @@ up-regulated upon LPS treatment.
 
 **Pathway analysis with FGSEA**
 
-**Note**: Self-hosted Phantasus requires additional steps to make **FGSEA** work properly:
-see section \@ref(serving-phantasus).
-
 The results of differential gene expression can be used for pathway enrichment analysis
 with _FGSEA_ tool.
 
 Open _Tools/Pathway Analysis/Perform FGSEA_, then select Pathway database, which corresponds specimen used in dataset
 (Mus Musculus in this example), ranking column and column with ENTREZID or Gene IDs.
 
-<img src="images/fgsea_tool.png" width="600px" />
+<img src="images/fgsea_tool.png" width="500px" />
 
 Clicking OK will open new tab with pathways table.
 

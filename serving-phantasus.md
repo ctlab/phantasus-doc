@@ -25,8 +25,11 @@ servePhantasus()
 You can customise serving of the application by specifying following parameters:
 
 - `host` and `port` (by default: `"0.0.0.0"` and `8000`);
-- `cacheDir` (by default: `tempdir()`) -- directory where downloaded datasets will be saved and reused in later sessions;
-- `preloadedDir` (by default: `NULL`) -- directory with `ExpressionSet` objects encoded in rda-files, that can be quickly loaded to application by name (see section Preloaded datasets);
+- `cacheDir` (by default: `tempdir()`) -- directory where downloaded datasets 
+    will be saved and reused in later sessions;
+- `preloadedDir` (by default: `NULL`) -- directory with `ExpressionSet` 
+    objects encoded in rda-files, that can be quickly loaded to application by
+    name (see section [Preloaded datasets](#preloaded-datasets));
 - `openInBrowser` (by default `TRUE`).
 
 # Setting up optional features
@@ -42,6 +45,7 @@ To store dataset on a server, on nead to save list `ess` of `ExpressionSet` obje
 into an RData file with `.rda` extension into a directory as specified in `servePhantasus`.
 
 Let us preprocess and save `GSE14308` dataset:
+
 
 ```r
 library(GEOquery)
@@ -63,16 +67,15 @@ save(ess, file=file.path(preloadedDir, "GSE14308_norm.rda"))
 
 Next we can serve Phantasus with set `preloadedDir` option:
 
-```{r, eval=F}
+
+```r
 servePhantasus(preloadedDir=preloadedDir)
 ```
 
 There you can either put `GSE14308_norm` name when using open option _Saved on server datasets_ or just 
 open by specifying the name in URL: http://localhost:8000/?preloaded=GSE14308_norm.
 
-```{r, out.width="650px", echo = FALSE}
-knitr::include_graphics("images/gse14308_norm.png")
-```
+<img src="images/gse14308_norm.png" width="650px" />
 
 ## Support for RNA-seq datasets
 
@@ -83,7 +86,8 @@ the [Download](http://amp.pharm.mssm.edu/archs4/download.html) section. The
 downloaded files `human_matrix.h5` and `mouse_matrix.h5` should be placed 
 into Phantasus cache under archs4 folder.
 Or you can call
-```{r, eval=F}
+
+```r
 updateARCHS4(cacheDir=cacheDir)
 ```
 
@@ -92,9 +96,20 @@ updateARCHS4(cacheDir=cacheDir)
 
 *FGSEA* requires pathway database in `.rds` files under `<cacheDir>/fgsea` folder.
 Pathway database is an `.rds` file containing dataframe with columns: `geneID`, `pathName`, `geneSymbol`. You can see an example dataframe by entering:
-```{r, eval=TRUE}
+
+```r
 data("fgseaExample", package="phantasus")
 head(fgseaExample)
+```
+
+```
+##   geneID                                pathName geneSymbol
+## 1  11461 5991955_Cell-cell_junction_organization       Actb
+## 2  11465 5991955_Cell-cell_junction_organization      Actg1
+## 3  12385 5991955_Cell-cell_junction_organization     Ctnna1
+## 4  12388 5991955_Cell-cell_junction_organization     Ctnnd1
+## 5  12550 5991955_Cell-cell_junction_organization       Cdh1
+## 6  12552 5991955_Cell-cell_junction_organization      Cdh11
 ```
 
 ## Annotation database for AnnotationDB tool

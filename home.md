@@ -7,18 +7,30 @@ permalink: /
 
 # Phantasus: visual and interactive gene expression analysis
 
-This documentation describes Phantasus -- a web-application 
-for visual and interactive gene expression analysis.
-Phantasus is based on 
-[Morpheus](https://software.broadinstitute.org/morpheus/) -- a web-based software
-for heatmap visualisation and analysis, which was integrated with an R
-environment via [OpenCPU API](https://www.opencpu.org/). 
 
+This documentation describes Phantasus -- a web tool designed for visual and
+interactive gene expression analysis.
+In
+particular, it was designed to allow to go from a typical dataset to
+differential expression and downstream analysis in an easy and streamlined
+manner. For that aim, Phantasus integrates an intuitive heatmap interface with
+gene expression analysis tools from Bioconductor. 
 
-The main object in Phantasus is a gene expression matrix.
-It can either be uploaded from a local text or Excel file 
-or loaded from Gene Expression Omnibus (GEO) database by the series identifier
-(both microarray and RNA-seq datasets are supported).
-Aside from basic visualization and filtering methods as implemented in Morpheus,
-R-based methods such as k-means clustering, principal component analysis, 
-differential expression analysis with limma package are supported.  
+Main features:
+* Loading public datasets from Gene Expression Omnibus with both microarrays and RNA-seq datasets (via ARCHS4) being supported.
+* Publication ready plots with export to SVG: PCA plot, row profiles, box plots.
+* Clustering: k-means and hierarchical.
+* Gene set enrichment analysis via `fgsea` package.
+* Sharing session links.
+
+<img src="images/screenshot.png" width="600px" />
+
+Links:
+* Official mirrors: [https://ctlab.itmo.ru/phantasus](https://ctlab.itmo.ru/phantasus) 
+    and [https://artyomovlab.wustl.edu/phantasus](https://artyomovlab.wustl.edu/phantasus).
+* Source code at GitHub: [https://github.com/ctlab/phantasus](https://github.com/ctlab/phantasus). 
+* Bioconductor package: [https://bioconductor.org/packages/phantasus](https://bioconductor.org/packages/phantasus).
+* Docker image: [https://hub.docker.com/r/dzenkova/phantasus](https://hub.docker.com/r/dzenkova/phantasus).
+
+Citation:
+* Zenkova D, Kamenev V, Sablina R, Artyomov M, Sergushichev A (2018). Phantasus: visual and interactive gene expression analysis. doi: 10.18129/B9.bioc.phantasus, [https://ctlab.itmo.ru/phantasus](https://ctlab.itmo.ru/phantasus). 
