@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Serving Phantasus
+title: Installation
 nav_order: 3
 ---
+
+Phantasus can be installed locally, either as an R package or a Docker image.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -10,12 +12,46 @@ nav_order: 3
 1. TOC
 {:toc }
 
-# Serving from R
+## Using R
+
+### Installation
+
+Phantasus R package can be installed from Bioconductor:
+
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("phantasus")
+```
+
+Alternatively, the latest version of Phantasus 
+can be installed from GitHub using `devtools` package.
+
+```r
+devtools::install_github("ctlab/phantasus")
+```
+
+A warning could appear that the repository contain submodules. This warning 
+can be safely ignored.
+
+### System dependencies
+
+There are several system packages that have to be installed on the system. The
+names of these packages will be displayed during installation. On Ubuntu can
+install them beforehand and all together using command:
+
+```bash
+sudo apt-get install libapparmor-dev libprotobuf-dev protobuf-compiler libcurl4-openssl-dev libssl-dev libxml2-dev
+```
 
 
-This following command runs the application with the default parameters,
+### Running
+
+
+This following `R` command runs the application with the default parameters,
 opens it in the default browser (from `browser` option) 
-with address [http://0.0.0.0:8000](http://0.0.0.0:8000):
+with address <http://0.0.0.0:8000>:
 
 ```r
 library(phantasus)
@@ -32,11 +68,40 @@ You can customise serving of the application by specifying following parameters:
     name (see section [Preloaded datasets](#preloaded-datasets));
 - `openInBrowser` (by default `TRUE`).
 
-# Setting up optional features
+## Using Docker
+
+To simplify deployment phantasus Docker image can be used. It is build regularly and is available at https://hub.docker.com/r/dzenkova/phantasus 
+You can run with the following commands:
+
+```bash
+docker pull dzenkova/phantasus
+docker run -t -d -p 80:80 dzenkova/phantasus
+```
+
+
+Phantasus will be available at <http://localhost>.
+
+Additionally, docker compose can be used (file is available [here](https://github.com/ctlab/phantasus/blob/master/docker-compose.yml)).
+You can run with the following command:
+
+```bash
+docker-compose up -d
+```
+
+Again, Phantasus will be available at <http://localhost>
+
+If you are running Phantasus using docker-compose
+you can set up the additional features using commands like this: 
+
+```bash
+docker-compose run phantasus R -e 'library(phantasus); updateARCHS4();'
+```
+
+## Setting up optional features
 
 Some of Phantasus features require additional set up.
 
-## Preloaded datasets 
+### Preloaded datasets 
 
 Preloaded datasets is a feature that allows quick access to frequently-accessed datasets
 or to share them inside the research group.
@@ -77,7 +142,7 @@ open by specifying the name in URL: http://localhost:8000/?preloaded=GSE14308_no
 
 <img src="images/gse14308_norm.png" width="650px" />
 
-## Support for RNA-seq datasets
+### Support for RNA-seq datasets
 
 Phantasus supports loading RNA-seq datasets from GEO using 
 gene expression counts as computed by [ARCHS4 project](http://amp.pharm.mssm.edu/archs4/index.html).
@@ -92,7 +157,7 @@ updateARCHS4(cacheDir=cacheDir)
 ```
 
 
-## Pathway database for FGSEA
+### Pathway database for FGSEA
 
 *FGSEA* requires pathway database in `.rds` files under `<cacheDir>/fgsea` folder.
 Pathway database is an `.rds` file containing dataframe with columns: `geneID`, `pathName`, `geneSymbol`. You can see an example dataframe by entering:
@@ -112,7 +177,7 @@ head(fgseaExample)
 ## 6  12552 5991955_Cell-cell_junction_organization      Cdh11
 ```
 
-## Annotation database for AnnotationDB tool
+### Annotation database for AnnotationDB tool
 
 *AnnotationDB* tool requires annotation databases 
 under `<cacheDir>/annotationdb` folder. For example you can get 

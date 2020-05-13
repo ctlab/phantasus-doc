@@ -25,10 +25,10 @@ treated with three stimuli: LPS, IFNg and combined LPS+INFg.
 ## Opening Phantasus
 
 The simplest way to try Phantasus application is to go to web-site
-[https://ctlab.itmo.ru/phantasus](https://ctlab.itmo.ru/phantasus) or
-its mirror [https://artyomovlab.wustl.edu/phantasus](https://artyomovlab.wustl.edu/phantasus)
+<https://ctlab.itmo.ru/phantasus> or
+its mirror <https://artyomovlab.wustl.edu/phantasus>
 where the latest versions are deployed. 
-Alternatively, Phantaus can be start locally (see [Serving Phantasus](serving-phantasus.html)).
+Alternatively, Phantaus can be installed locally (see [Installation](installation.html)).
 
 When Phantasus opens the starting screen should appear:
 
@@ -55,7 +55,7 @@ Columns correspond to samples.
 They are annotated with titles, GEO sample accession identifiers and treatment field.
 The annotations, such as treatment, are loaded from user-submitted GEO annotations 
 (they can be seen, for example, in _Charateristics_
-section at [https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1304836](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1304836)).
+section at <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1304836>).
 We note that not for all of the datasets in GEO such proper annotations are supplied.
 
 ### Adjusting expression values
@@ -77,7 +77,7 @@ The new tab with adjusted values will appear. All operations that modify gene ex
 matrix (such as adjustment, subsetting and several others) create a new tab. This allows 
 to revert the operation by going back to one of the previous tabs.
 
-**Removing duplicate genes**
+### Removing duplicate genes
 
 Since the dataset is obtained with a mircroarray, a single gene can be represented by
 several probes. This can be seen, for example, by sorting rows 
@@ -100,7 +100,7 @@ _Gene ID_ as the collapse field.
 The result will be shown in a new tab. 
 
 
-**Filtering lowly-expressed genes**
+### Filtering lowly-expressed genes
 
 Additionally, lowly-epxressed genes can be filtered explicitly. It helps to reduce noise and increase
 power of downstream analysis methods. 
@@ -143,7 +143,7 @@ will be downloaded.
 
 ## Exploring the dataset
 
-**PCA Plot**
+### PCA Plot
 
 One of the ways to asses quality of the dataset is to use
 principal component analysis (PCA) method. This can be done
@@ -161,7 +161,7 @@ _treatment_ annotation.
 It can be seen that in this dataset the first replicates in each condition 
 are outliers.
 
-**K-means clustering**
+### K-means clustering
 
 Another useful dataset exploration tool is k-means clustering.
 Use _Tools/Clustering/k-means_ to cluster genes into 16 clusters.
@@ -174,7 +174,7 @@ Here also one can clearly see outlying samples.
 
 <img src="images/kmeans_result.jpg" width="600px" />
 
-**Hierarchical clustering**
+### Hierarchical clustering
 
 _Tool/Hierarchical clustering_ menu can be used to cluster 
 samples and highlight outliers (and 
@@ -182,7 +182,7 @@ concordance of other samples) even further.
 
 <img src="images/hierarchical_tool.jpg" width="500px" />
 
-**Filtering outliers**
+### Filtering outliers
 
 Now, when outliers are confirmed and easily viewed with the dendrogram 
 from the previous step, you can select the good samples 
@@ -192,7 +192,7 @@ and extract them into another heatmap (by clicking _Tools/New Heat Map_ or press
 
 ## Differential gene expression
 
-**Apllying _limma_ tool**
+### Apllying _limma_ tool
 
 Differential gene expression analysis can be carried out
 with _Tool/Diffential Expression/limma_ menu. 
@@ -208,7 +208,7 @@ up-regulated upon LPS treatment.
 
 <img src="images/limma_results.png" width="600px" />
 
-**Pathway analysis with FGSEA**
+### Pathway analysis with FGSEA
 
 The results of differential gene expression can be used for pathway enrichment analysis
 with _FGSEA_ tool.

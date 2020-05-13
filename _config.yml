@@ -6,7 +6,7 @@ plugins:
 remote_theme: pmarsceill/just-the-docs
 
 kramdown:
-  toc_levels: "1,2"
+  toc_levels: "1,2,3"
 
 aux_links:
   "Phantasus on GitHub":
