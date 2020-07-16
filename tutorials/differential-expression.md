@@ -14,9 +14,9 @@ nav_order: 3
 ## Introduction
 
 This is the third of three related modules:
-* [Preparing gene expression dataset](preparing)
-* [Exploring dataset](exploration)
-* [Differential expression and downstream analysis](differential-expression)
+* [Preparing gene expression dataset]({{ site.baseurl }}{%link tutorials/preparing.md%})
+* [Exploring dataset]({{ site.baseurl }}{%link tutorials/exploration.md%})
+* [Differential expression and downstream analysis]({{ site.baseurl }}{%link tutorials/differential-expression.md%})
 
 In this module we start with a normalized and filtered dataset, do a differential
 expression analysis and follow it up with pathway enrichment analysis.

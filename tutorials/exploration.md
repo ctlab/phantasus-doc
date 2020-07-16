@@ -14,13 +14,13 @@ nav_order: 2
 ## Introduction
 
 This is the second of three related modules:
-* [Preparing gene expression dataset](preparing)
-* [Exploring dataset](exploration)
-* [Differential expression and downstream analysis](differential-expression)
+* [Preparing gene expression dataset]({{ site.baseurl }}{%link tutorials/preparing.md%})
+* [Exploring dataset]({{ site.baseurl }}{%link tutorials/exploration.md%})
+* [Differential expression and downstream analysis]({{ site.baseurl }}{%link tutorials/differential-expression.md%})
 
 In this module we start with normalized dataset, do a basic exploration and 
 remove outliers, thus obtaining a proper dataset for differential expression analysis.
 
 You can either continue the session from the previous module, or download
-GCT file from [here]({% link tutorials/preparing.files/GSE53986_norm.gct%}) 
+GCT file from [here]({{ site.baseurl }}{% link tutorials/preparing.files/GSE53986_norm.gct%}) 
 and load it into Phantasus.

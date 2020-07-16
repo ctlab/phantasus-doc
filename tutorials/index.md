@@ -8,10 +8,10 @@ has_toc: false
 
 # Tutorials
 
-There are three related tutorials extending [Quick Start](/quick-start):
-* [Preparing gene expression dataset](preparing)
-* [Exploring dataset](exploration)
-* [Differential expression and downstream analysis](differential-expression)
+There are three related tutorials extending [Quick Start]({{ site.baseurl }}{%link quick-start.md%}):
+* [Preparing gene expression dataset]({{ site.baseurl }}{%link tutorials/preparing.md%})
+* [Exploring dataset]({{ site.baseurl }}{%link tutorials/exploration.md%})
+* [Differential expression and downstream analysis]({{ site.baseurl }}{%link tutorials/differential-expression.md%})
 
 
 TODO:
