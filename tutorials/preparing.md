@@ -14,9 +14,9 @@ nav_order: 1
 ## Introduction
 
 This is the first of three related modules:
-* [Preparing gene expression dataset]({% link tutorials/preparing.md%})
-* [Exploring dataset]({% link tutorials/exploration.md%})
-* [Differential expression and downstream analysis]({% link tutorials/differential-expression.md%})
+* [Preparing gene expression dataset](preparing)
+* [Exploring dataset](exploration)
+* [Differential expression and downstream analysis](differential-expression)
 
 In this module we cover steps from finding a gene expression dataset link
 in a published paper to a normalized dataset, prepared
