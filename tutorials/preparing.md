@@ -261,10 +261,17 @@ The resulting dataset can be saved locally, so that it can be easily reloaded.
 In order to save it use _File/Save Dataset_ menu. 
 Enter an appropriate file name (e.g. `GSE53986_norm`)
 and press `OK`. 
-After that a file in a text [GCT format](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GCT:_Gene_Cluster_Text_file_format_.28.2A.gct.29)
-will be downloaded. 
 
 <img src="preparing.files/save.svg" width="500px" />
+
+After that a file in a text [GCT format](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GCT:_Gene_Cluster_Text_file_format_.28.2A.gct.29)
+will be downloaded. 
+The file should be similar to
+[GSE53986_norm.gct]({{ site.baseurl }}{% link tutorials/preparing.files/GSE53986_norm.gct%}). 
+As GCT is a text format, you can open and modify it in a text or spreadsheet editor.
+
+
+<img src="preparing.files/gct_file.png" width="500px" />
 
 To load dataset use *File/Open* menu, click on *Open your own file* dropdown menu,
 click on *My computer* and select there the gct file.

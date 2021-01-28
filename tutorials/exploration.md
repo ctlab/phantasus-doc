@@ -22,7 +22,7 @@ In this module we start with normalized dataset, do a basic exploration and
 remove outliers, thus obtaining a proper dataset for differential expression analysis.
 
 You can either continue the session from the previous module, or download
-GCT file from [here]({{ site.baseurl }}{% link tutorials/preparing.files/GSE53986_norm.gct%}) 
+file [GSE53986_norm.gct]({{ site.baseurl }}{% link tutorials/preparing.files/GSE53986_norm.gct%}) 
 and load it into Phantasus.
 
 ## PCA Plot
@@ -137,7 +137,7 @@ account as well, thus making data in the good samples more noisy.
 
 ## Summary
 
-To summarize this and the previous modules:
+To summarize this and the previous module:
 1. For the most types of analysis gene expression data should be log-scaled. 
 Sometimes the data can be already log-scaled, some time it is not.
 It is important to check this and make it log-scale if necessary.

@@ -201,7 +201,7 @@ _Untreated_ and _LPS_ as classes. Clicking _OK_
 will call differential gene expression analysis method 
 with [*limma*](https://bioconductor.org/packages/limma) R package.
 
-<img src="images/limma_tool.jpg" width="500px" />
+<img src="images/limma_tool.png" width="500px" />
 
 The rows can be ordered by decreasing *t*-statistic column to see which genes are the most
 up-regulated upon LPS treatment. 
