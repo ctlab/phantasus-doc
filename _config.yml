@@ -11,3 +11,6 @@ kramdown:
 aux_links:
   "Phantasus on GitHub":
       - "https://github.com/ctlab/phantasus"
+
+ga_tracking: G-P50BJBHWD2
+ga_tracking_anonymize_ip: true
