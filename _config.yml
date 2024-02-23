@@ -1,9 +1,10 @@
 title: Phantasus 
-#theme: "just-the-docs"
 
 plugins:
   - jekyll-remote-theme
-remote_theme: pmarsceill/just-the-docs
+  - jekyll-spaceship
+remote_theme: 
+  just-the-docs/just-the-docs@main
 
 kramdown:
   toc_levels: "1,2,3"
