@@ -25,7 +25,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("phantasus")
 ```
 
-However, we recommend to use version at least 1.23.4,
+However, the current set up instruction assumes **Phantasus version at least 1.23.4**,
 which can be installed from Bioconductor-devel (requires R version 4.4). Alternatively, the latest version of Phantasus 
 can be installed from GitHub using `devtools` package.
 
@@ -37,7 +37,7 @@ devtools::install_github("ctlab/phantasus")
 ### System dependencies
 
 There are several system packages that have to be installed on the system. The
-names of these packages will be displayed during installation. On Ubuntu can
+names of these packages will be displayed during installation. On Ubuntu one can
 install them beforehand and all together using command:
 
 ```bash
