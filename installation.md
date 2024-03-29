@@ -25,7 +25,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("phantasus")
 ```
 
-However, the current set up instruction assumes **Phantasus version at least 1.23.4**,
+However, the current set up instruction assumes **Phantasus version at least 1.23.5**,
 which can be installed from Bioconductor-devel (requires R version 4.4). Alternatively, the latest version of Phantasus 
 can be installed from GitHub using `devtools` package.
 
@@ -34,7 +34,7 @@ devtools::install_github("ctlab/phantasus")
 ```
 
 
-### System dependencies
+### Dependencies
 
 There are several system packages that have to be installed on the system. The
 names of these packages will be displayed during installation. On Ubuntu one can
@@ -42,6 +42,12 @@ install them beforehand and all together using command:
 
 ```bash
 sudo apt-get install libapparmor-dev libfontconfig1-dev libcairo2-dev libcurl4-openssl-dev pandoc libtiff5-dev libfribidi-dev libharfbuzz-dev libssl-dev libxml2-dev libprotobuf-dev protobuf-compiler
+```
+
+Further, the latest version of `phantasus` depends on `rhdf5client (>= 1.25.1)` from Bioconductor 3.19, which on older systems can be more convenient to install from GitHub:
+
+```r
+devtools::install_github("vjcitn/rhdf5client")
 ```
 
 ### Configuration
@@ -66,15 +72,15 @@ The configuration file includes the following parameters:
 | `cache_folders`  | `geo_path: !expr file.path(cache_root, 'geo/')` | Folder with GEO-related cache files |
 | ^^               | {: style=";border-left: 1px solid #eeebee !important" } `annot_db: !expr file.path(cache_root, 'annotationdb/')` | Folder with gene annotation databases in sqlite format |
 | ^^               | {: style=";border-left: 1px solid #eeebee !important" } `fgsea_pathways:!expr file.path(cache_root, 'fgsea_pathways')` | Folder with pathways for `fgsea` package |
-| ^^               | {: style=";border-left: 1px solid #eeebee !important" } `rnaseq_counts: "https://ctlab.itmo.ru/hsds/?domain=/counts"` | Folder with RNA-seq hdf5 files in ARCHs4-like format or URL to HSDS server|
+| ^^               | {: style=";border-left: 1px solid #eeebee !important" } `rnaseq_counts: "https://alserglab.wustl.edu/hsds/?domain=/counts"` | Folder with RNA-seq hdf5 files in ARCHs4-like format or URL to HSDS server|
 |   `geo_mirrors`  | {: style=";border-left: 1px solid #eeebee !important" } `true_geo: "https://ftp.ncbi.nlm.nih.gov"`  |  GEO ftp server providing all files for related datasets |
-| ^^                | {: style=";border-left: 1px solid #eeebee !important" } `minimal_cache: "https://ctlab.itmo.ru/files/software/phantasus/minimal-cache/"` |    Additional ftp server with a bunch of platform annotation files in machine readable format   |
+| ^^                | {: style=";border-left: 1px solid #eeebee !important" } `minimal_cache: "https://alserglab.wustl.edu/files/phantasus/minimal-cache/"` |    Additional ftp server with a bunch of platform annotation files in machine readable format   |
 
 
 The user which runs Phantasus has to have read and write permissions for all local paths mentioned in `user.conf`. 
-If some folder does not exist, the setup function will create it and will prompt you to fill it using the Phantasus [minimal cache mirror](https://ctlab.itmo.ru/files/software/phantasus/minimal-cache/). 
+If some folder does not exist, the setup function will create it and will prompt you to fill it using the Phantasus [minimal cache mirror](https://alserglab.wustl.edu/files/phantasus/minimal-cache/). 
 Setup function is able to load automatically files for `annot_db` and `fgsea_pathways` folders.
-Files with RNA-seq count matrices, which are used in original Phantasus, are available at [minimal cache mirror](https://ctlab.itmo.ru/files/software/phantasus/minimal-cache/) too, but should be loaded manually if desired. However, we suggest the use of HSDS server by default which is able to load count matrices for RNA-seq datasets without storing any huge files.
+Files with RNA-seq count matrices, which are used in original Phantasus, are available at [minimal cache mirror](https://alserglab.wustl.edu/files/phantasus/minimal-cache/) too, but should be loaded manually if desired. However, we suggest the use of HSDS server by default which is able to load count matrices for RNA-seq datasets without storing any huge files.
 
 
 ### Running
@@ -95,11 +101,11 @@ You can customize serving of the application by specifying following parameters:
 
 ## Using Docker
 
-To simplify deployment a phantasus docker image can be used. It is build regularly and is available at https://hub.docker.com/r/asergushichev/phantasus You can load the image with the following
+To simplify deployment a phantasus docker image can be used. It is build regularly and is available at https://hub.docker.com/r/alserglab/phantasus You can load the image with the following
 command (assuming you have Docker installed and have permissions to use it):
 
 ```bash
-docker pull asergushichev/phantasus
+docker pull alserglab/phantasus
 ```
 
 The dockerized Phantasus automatically configures itself on the 
@@ -115,7 +121,7 @@ mkdir phantasus-cache
 docker run -t -p 8000:8000 \
     --env OCPU_USER=$UID \
     --mount type=bind,source=`pwd`/phantasus-cache,target=/var/phantasus/cache \
-    asergushichev/phantasus
+    alserglab/phantasus
 ``` 
 
 After all resources are downloaded you will get the message, that Phantasus application is up and it becomes available at <http://localhost:8000>. The cached resources will be stored
@@ -220,8 +226,8 @@ open by specifying the name in the URL: <http://localhost:8000/?preloaded=GSE143
 
 Phantasus supports loading RNA-seq datasets from GEO using precomputed
 gene expression counts. There are two ways to enable this feature.
-The simplest way is to use count matrices from the official Phantasus web-server. In order to do that you need the `rnaseq_counts` setting in the `user.conf` file equal to `"https://ctlab.itmo.ru/hsds/?domain=/counts"`.
-Another way is to download gene level expression files from Phantasus [minimal cache mirror](https://ctlab.itmo.ru/files/software/phantasus/minimal-cache/counts)  and set containing folder as a value of `rnaseq_counts` setting in `user.conf`.
+The simplest way is to use count matrices from the official Phantasus web-server. In order to do that you need the `rnaseq_counts` setting in the `user.conf` file equal to `"https://alserglab.wustl.edu/hsds/?domain=/counts"`.
+Another way is to download gene level expression files from Phantasus [minimal cache mirror](https://alserglab.wustl.edu/files/phantasus/minimal-cache/counts)  and set containing folder as a value of `rnaseq_counts` setting in `user.conf`.
 In both ways count values will be available as computed by [ARCHS4](http://amp.pharm.mssm.edu/archs4/index.html) and [DEE2](https://dee2.io/index.html) projects.
 
 

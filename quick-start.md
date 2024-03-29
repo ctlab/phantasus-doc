@@ -25,10 +25,9 @@ treated with three stimuli: LPS, IFNg and combined LPS+INFg.
 ## Opening Phantasus
 
 The simplest way to try Phantasus application is to go to web-site
-<https://ctlab.itmo.ru/phantasus> or
-its mirror <https://artyomovlab.wustl.edu/phantasus>
+<https://alserglab.wustl.edu/phantasus>
 where the latest versions are deployed. 
-Alternatively, Phantaus can be installed locally (see [Installation](installation.html)).
+Alternatively, Phantasus can be installed locally (see [Installation](installation.html)).
 
 When Phantasus opens the starting screen should appear:
 

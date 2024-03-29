@@ -61,8 +61,7 @@ simultaneously.
 
 ## Basic controls
 
-Now let us open the dataset in Phantasus. Use either
-<https://ctlab.itmo.ru/phantasus> or <https://artyomovlab.wustl.edu/phantasus>
+Now let us open the dataset in Phantasus. Use <https://alserglab.wustl.edu/phantasus>
 mirror. Then click on *Choose a file* input, select *GEO Datasets*,
 enter GSE53986 and click *Load* button (or press *Enter* on the keyboard).
 
