@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Exploring dataset
-parent: Tutorials
+parent: GSE53986
+grand_parent: Tutorials
 nav_order: 2
 ---
 
@@ -14,15 +15,15 @@ nav_order: 2
 ## Introduction
 
 This is the second of three related modules:
-* [Preparing gene expression dataset]({{ site.baseurl }}{%link tutorials/preparing.md%})
-* [Exploring dataset]({{ site.baseurl }}{%link tutorials/exploration.md%})
-* [Differential expression and downstream analysis]({{ site.baseurl }}{%link tutorials/differential-expression.md%})
+* [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
+* [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
+* [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
 
 In this module we start with normalized dataset, do a basic exploration and 
 remove outliers, thus obtaining a proper dataset for differential expression analysis.
 
 You can either continue the session from the previous module, or download
-file [GSE53986_norm.gct]({{ site.baseurl }}{% link tutorials/preparing.files/GSE53986_norm.gct%}) 
+file [GSE53986_norm.gct]({% link tutorials/GSE53986/preparing.files/GSE53986_norm.gct%}) 
 and load it into Phantasus.
 
 ## PCA Plot
@@ -120,7 +121,7 @@ and extract them into another heatmap (by clicking _Tools/New Heat Map_ or press
 Finally, let us save the filtered dataset as "GSE53986_filtered.gct" using 
 _File/Save Dataset_ menu. For the reference, the result should be similar
 to the following file: 
-[GSE53986_filtered.gct]({{ site.baseurl }}{% link tutorials/exploration.files/GSE53986_filtered.gct%}).
+[GSE53986_filtered.gct]({% link tutorials/GSE53986/exploration.files/GSE53986_filtered.gct%}).
 
 There is a couple of points that should be kept in mind about filtering outliers:
 * There is no definite way to distinguish outliers from biological variation,

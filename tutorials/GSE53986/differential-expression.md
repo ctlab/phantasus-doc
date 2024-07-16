@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Differential expression and downstream analysis
-parent: Tutorials
+parent: GSE53986
+grand_parent: Tutorials
 nav_order: 3
 ---
 
@@ -14,15 +15,15 @@ nav_order: 3
 ## Introduction
 
 This is the third of three related modules:
-* [Preparing gene expression dataset]({{ site.baseurl }}{%link tutorials/preparing.md%})
-* [Exploring dataset]({{ site.baseurl }}{%link tutorials/exploration.md%})
-* [Differential expression and downstream analysis]({{ site.baseurl }}{%link tutorials/differential-expression.md%})
+* [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
+* [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
+* [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
 
 In this module we start with a normalized and filtered dataset, do a differential
 expression analysis and follow it up with pathway enrichment analysis.
 
 You can either continue the session from the previous module, or download
-file [GSE53986_filtered.gct]({{ site.baseurl }}{% link tutorials/exploration.files/GSE53986_filtered.gct%}) 
+file [GSE53986_filtered.gct]({% link tutorials/GSE53986/exploration.files/GSE53986_filtered.gct%}) 
 and load it into Phantasus.
 
 ## Apllying _limma_ tool
@@ -53,7 +54,7 @@ We have found genes differentially regulated upon LPS treatment.
 Now we can save the results as a GCT file to able to return to it later
 or share with a colleague.
 The resulting file should be similar to 
-[GSE53986_Ctrl_vs_LPS.gct]({{ site.baseurl }}{% link tutorials/differential-expression.files/GSE53986_Ctrl_vs_LPS.gct%}).
+[GSE53986_Ctrl_vs_LPS.gct]({% link tutorials/GSE53986/differential-expression.files/GSE53986_Ctrl_vs_LPS.gct%}).
 
 However, in Phantasus you can share the result by providing link to the current
 session. Use *File/Get dataset link* menu.
@@ -138,7 +139,7 @@ GSEA (gene set enrichment analysis) plot. In our case let consider Interferon Ga
 First, go to the pathway description: <http://www.gsea-msigdb.org/gsea/msigdb/cards/HALLMARK_INTERFERON_GAMMA_RESPONSE.html>.
 There, click on *text* format in *Download gene set* row, which will get you a
 file with a list of genes in this pathway: 
-[geneset.txt]({{ site.baseurl }}{% link tutorials/differential-expression.files/geneset.txt%}).
+[geneset.txt]({% link tutorials/GSE53986/differential-expression.files/geneset.txt%}).
 
 Copy the genes from the pathway and paste them in search field in Phantasus. 
 Sort the dataset by *t* column and select *Fit To Windows* zoom option to 

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Preparing gene expression dataset
-parent: Tutorials
+parent: GSE53986
+grand_parent: Tutorials
 nav_order: 1
 ---
 
@@ -14,9 +15,9 @@ nav_order: 1
 ## Introduction
 
 This is the first of three related modules:
-* [Preparing gene expression dataset]({{ site.baseurl }}{%link tutorials/preparing.md%})
-* [Exploring dataset]({{ site.baseurl }}{%link tutorials/exploration.md%})
-* [Differential expression and downstream analysis]({{ site.baseurl }}{%link tutorials/differential-expression.md%})
+* [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
+* [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
+* [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
 
 In this module we cover steps from finding a gene expression dataset link
 in a published paper to a normalized dataset, prepared
@@ -266,7 +267,7 @@ and press `OK`.
 After that a file in a text [GCT format](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#GCT:_Gene_Cluster_Text_file_format_.28.2A.gct.29)
 will be downloaded. 
 The file should be similar to
-[GSE53986_norm.gct]({{ site.baseurl }}{% link tutorials/preparing.files/GSE53986_norm.gct%}). 
+[GSE53986_norm.gct]({% link tutorials/GSE53986/preparing.files/GSE53986_norm.gct%}). 
 As GCT is a text format, you can open and modify it in a text or spreadsheet editor.
 
 
