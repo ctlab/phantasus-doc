@@ -14,10 +14,10 @@ nav_order: 2
 
 ## Introduction
 
-This is the second of three related modules:
-* [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
-* [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
-* [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
+This is the second of three modules on analysis of microarray dataset GSE53986:
+1. [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
+2. [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
+3. [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
 
 In this module we start with normalized dataset, do a basic exploration and 
 remove outliers, thus obtaining a proper dataset for differential expression analysis.

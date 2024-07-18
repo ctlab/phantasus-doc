@@ -14,10 +14,10 @@ nav_order: 3
 
 ## Introduction
 
-This is the third of three related modules:
-* [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
-* [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
-* [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
+This is the third of three modules on analysis of microarray dataset GSE53986:
+1. [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
+2. [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
+3. [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
 
 In this module we start with a normalized and filtered dataset, do a differential
 expression analysis and follow it up with pathway enrichment analysis.

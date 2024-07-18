@@ -15,7 +15,8 @@ nav_order: 2
 In this vignette we show example usage of Phantasus for analysis of public gene
 expression data from GEO database.
 It starts from loading data, normalization and filtering outliers, 
-to doing differential gene expression analysis and downstream analysis.
+to doing differential gene expression analysis and downstream analysis. 
+More detailed walk-through of the analysis is available [here]({% link tutorials/GSE53986/index.md %})
 
 To illustrate the usage of Phantasus let us consider public dataset from Gene Expression Omnibus (GEO) database
 [GSE53986](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53986). 

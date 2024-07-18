@@ -14,10 +14,10 @@ nav_order: 1
 
 ## Introduction
 
-This is the first of three related modules:
-* [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
-* [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
-* [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
+This is the first of three modules on analysis of microarray dataset GSE53986:
+1. [Preparing gene expression dataset]({%link tutorials/GSE53986/preparing.md%})
+2. [Exploring dataset]({%link tutorials/GSE53986/exploration.md%})
+3. [Differential expression and downstream analysis]({%link tutorials/GSE53986/differential-expression.md%})
 
 In this module we cover steps from finding a gene expression dataset link
 in a published paper to a normalized dataset, prepared
